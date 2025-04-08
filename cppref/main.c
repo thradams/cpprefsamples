@@ -1,3 +1,7 @@
+/*
+  A quick and dirty code to grab source code from cppreference HTML pages.
+*/
+
 #include "fs.h"
 #include <errno.h>
 #include <string.h>
