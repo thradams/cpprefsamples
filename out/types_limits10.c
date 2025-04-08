@@ -1,5 +1,6 @@
 //https://en.cppreference.com/w/c/types/limits.html
-" class="mw-geshi" style="text-align: left;">#include <float.h>
+
+#include <float.h>
 #include <math.h>
 #include <stdio.h>
 

@@ -1,5 +1,6 @@
 //https://en.cppreference.com/w/c/language/operator_member_access.html
-" class="mw-geshi" style="text-align: left;">#include <stdio.h>
+
+#include <stdio.h>
 struct s {int x;};
 int main(void)
 {

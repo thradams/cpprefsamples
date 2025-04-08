@@ -1,5 +1,20 @@
 //https://en.cppreference.com/w/c/language/arithmetic_types.html
-" class="mw-geshi" style="text-align: left;">float a[4] = {1, 2, 3, 4};
-float complex z1, z2;
-memcpy(&z1, a, sizeof z1); // z1 becomes 1.0 + 2.0i
-memcpy(&z2, a+2, sizeof z2); // z2 becomes 3.0 + 4.0i
+
+#include <complex.h>
+#include <math.h>
+#include <stdio.h>
+
+int main(void)
+{
+    double complex z = (1 + 0*I) * (INFINITY + I*INFINITY);
+//  textbook formula would give
+//  (1+i0)(+i)  (1  0) + i(0+1)  NaN + I*NaN
+//  but C gives a complex infinity
+    printf("%f%+f*i\n", creal(z), cimag(z));
+
+//  textbook formula would give
+//  cexp(+iNaN)  exp()(cis(NaN))  NaN + I*NaN
+//  but C gives  +i*nan
+    double complex y = cexp(INFINITY + I*NAN);
+    printf("%f%+f*i\n", creal(y), cimag(y));
+}

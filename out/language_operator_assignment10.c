@@ -1,6 +1,21 @@
 //https://en.cppreference.com/w/c/language/operator_assignment.html
-" class="mw-geshi" style="text-align: left;">T1* addr = &lhs;
-T2 val = rhs;
-T1 old = *addr;
-T1 new;
-do { new = old @ val } while (!atomic_compare_exchange_strong(addr, &old, new);
+
+#include <stdio.h>
+
+int main(void)
+{
+    int x = 10; 
+    int hundred = 100; 
+    int ten = 10; 
+    int fifty = 50; 
+
+    printf("%d%d%d%d\n", x, hundred, ten, fifty);
+
+    hundred *= x; 
+    ten     /= x; 
+    fifty   %= x; 
+
+    printf("%d%d%d%d\n", x, hundred, ten, fifty);
+
+    return 0;
+}

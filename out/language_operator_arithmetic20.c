@@ -1,5 +1,6 @@
 //https://en.cppreference.com/w/c/language/operator_arithmetic.html
-" class="mw-geshi" style="text-align: left;">// work in progress
+
+// work in progress
 int n = 4, m = 3;
 int a[n][m];     // VLA of 4 VLAs of 3 ints each
 int (*p)[m] = a; // p == &a[0] 

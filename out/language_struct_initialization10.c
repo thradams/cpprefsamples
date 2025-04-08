@@ -1,10 +1,15 @@
 //https://en.cppreference.com/w/c/language/struct_initialization.html
-" class="mw-geshi" style="text-align: left;">struct fred { char s[4]; int n; };
-struct fred x[ ] = { { { "abc" }, 1 }, // inits x[0] to { {'a','b','c','\0'}, 1 }
-                      [0].s[0] = 'q'   // changes x[0] to { {'q','b','c','\0'}, 1 }
-                   };
-struct fred y[ ] = { { { "abc" }, 1 }, // inits y[0] to { {'a','b','c','\0'}, 1 }
-                     [0] = { // current object is now the entire y[0] object
-                             .s[0] = 'q' 
-                            } // replaces y[0] with { {'q','\0','\0','\0'}, 0 }
-                    };
+
+#include <stdio.h>
+#include <time.h>
+
+int main(void)
+{
+    char buff[70];
+    // designated initializers simplify the use of structs whose
+    // order of members is unspecified
+    struct tm my_time = { .tm_year=2012-1900, .tm_mon=9, .tm_mday=9,
+                          .tm_hour=8, .tm_min=10, .tm_sec=20 };
+    strftime(buff, sizeof buff, "%A%c", &my_time);
+    puts(buff);
+}

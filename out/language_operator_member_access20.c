@@ -1,5 +1,6 @@
 //https://en.cppreference.com/w/c/language/operator_member_access.html
-" class="mw-geshi" style="text-align: left;">int f(char c) { return c;}
+
+int f(char c) { return c;}
 int main(void)
 {
    int n = 1;

@@ -1,5 +1,6 @@
 //https://en.cppreference.com/w/c/language/operator_logical.html
-" class="mw-geshi" style="text-align: left;">#include <stdbool.h>
+
+#include <stdbool.h>
 #include <stdio.h>
 int main(void)
 {

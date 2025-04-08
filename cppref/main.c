@@ -56,7 +56,7 @@ static int compile_many_files(const char * base, const char * path, const char *
                     const char * begin = strstr(content, "Run this code");
                     while (begin)
                     {
-                        begin += sizeof("Run this code") - 1;
+                        begin += (sizeof("Run this code") - 1);
 
                         const char * end = strstr(begin, "</pre></div></div>");
                         if (end)
@@ -143,7 +143,7 @@ static int compile_many_files(const char * base, const char * path, const char *
                             num_files++;
                         }
                         //
-                        begin = strstr(end, "<div dir=\"ltr\" class=\"mw-geshi\" style=\"text-align: left;\"><div class=\"c source-c\">");
+                        begin = strstr(end, "Run this code");
                         src_count++;
                     }
                 }

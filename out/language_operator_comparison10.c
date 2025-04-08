@@ -1,5 +1,6 @@
 //https://en.cppreference.com/w/c/language/operator_comparison.html
-" class="mw-geshi" style="text-align: left;">#include <assert.h>
+
+#include <assert.h>
 int main(void)
 {
     assert(2+2 == 4.0); // int converts to double, two 4.0's compare equal

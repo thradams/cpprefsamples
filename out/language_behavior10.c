@@ -1,5 +1,6 @@
 //https://en.cppreference.com/w/c/language/behavior.html
-" class="mw-geshi" style="text-align: left;">#include <stdio.h>
+
+#include <stdio.h>
 
 int fermat()
 {

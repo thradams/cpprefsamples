@@ -1,5 +1,6 @@
 //https://en.cppreference.com/w/c/language/operator_arithmetic.html
-" class="mw-geshi" style="text-align: left;">#include <stdio.h>
+
+#include <stdio.h>
 enum {ONE=1, TWO=2};
 int main(void)
 {
