@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/cppref/v17
+/.vs/cppref/FileContentIndex
+/.vs/cpprefsamples/FileContentIndex
+/.vs/cpprefsamples/v17
+/.vs
+/cppref/x64/Debug
+/x64/Debug
